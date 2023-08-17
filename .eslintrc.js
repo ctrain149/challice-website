@@ -3,7 +3,7 @@ module.exports = {
   env: { node: true, es6: true, es2021: true },
   ignorePatterns: ['node_modules/*', '.next/*', '.out/*', '!.prettierrc.js'],
   plugins: ['prettier'],
-  extends: ['next', 'next/babel', 'eslint:recommended', 'prettier'],
+  extends: ['next', 'eslint:recommended', 'prettier'],
   parserOptions: {
     sourceType: 'module',
   },

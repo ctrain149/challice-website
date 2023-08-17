@@ -25,7 +25,11 @@ export default function Select({
 
   function renderMenuItems() {
     return items.map((item) => {
-      return <MenuItem key={item.value} value={item.value}>{item.label}</MenuItem>;
+      return (
+        <MenuItem key={item.value} value={item.value}>
+          {item.label}
+        </MenuItem>
+      );
     });
   }
 
@@ -48,7 +52,7 @@ export default function Select({
           onChange={change}
           width={width}
         >
-          { renderMenuItems() }
+          {renderMenuItems()}
         </MatSelect>
       </FormControl>
     </div>
