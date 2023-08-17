@@ -1,0 +1,17 @@
+@import '../../../styles/colors.scss';
+
+.Link {
+  display: inline;
+}
+
+.link {
+  cursor: pointer;
+
+  color: $color-focus;
+  font-size: var(--font-size);
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}

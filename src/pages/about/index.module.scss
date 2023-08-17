@@ -1,0 +1,43 @@
+.About {
+  flex: 1 0 0;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  align-self: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 640px;
+  height: 100%;
+  padding: 20px;
+
+  box-sizing: border-box;
+
+  &Img {
+    position: relative;
+    aspect-ratio: 3088 / 2316;
+    width: 100%;
+    max-width: 500px;
+  }
+}
+
+.imgAuthor {
+  @supports (font: -apple-system-body) and (-webkit-appearance: none) {
+    img[loading="lazy"] {
+      clip-path: inset(0.6px)
+    }
+  }
+}
+
+.labelTitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 20px;
+  font-weight: bold;
+}

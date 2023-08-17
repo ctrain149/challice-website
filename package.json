@@ -1,0 +1,35 @@
+{
+  "name": "author-website",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "format": "prettier --write './src/**/*'",
+    "lint": "next lint",
+    "lint:fix": "eslint ./src/**/*.js -c .eslintrc.js --fix --ext js",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/server": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.3",
+    "@mui/material": "^5.14.5",
+    "@sendgrid/mail": "^7.7.0",
+    "@vercel/analytics": "^0.1.11",
+    "@zensen/form-service": "^2.0.29",
+    "@zensen/form-validators": "^1.0.8",
+    "next": "^13.4.16",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.65.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.47.0",
+    "eslint-config-next": "^13.4.16",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "prettier": "^3.0.2"
+  }
+}

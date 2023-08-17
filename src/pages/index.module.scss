@@ -1,0 +1,115 @@
+@import '../styles/colors.scss';
+
+.Home {
+  flex: 1 0 0;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  padding: 0 20px 20px 20px;
+
+  box-sizing: border-box;
+
+  &Book {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+
+    &Header {
+      display: block;
+    }
+
+    &Content {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: flex-start;
+      gap: 20px;
+      width: 100%;
+
+      @media screen and (max-width: 700px)  {
+        flex-flow: column nowrap;
+        align-items: center;
+      }
+
+      &Left {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        width: 100%;
+        max-width: 340px;
+      }
+
+      &Right {
+        flex: 1 0 0;
+        display: flex;
+        max-width: 800px;
+      }
+    }
+
+    &Footer {
+      display: flex;
+      padding: 0 70px;
+    }
+  }
+
+  &Preorder {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  &Buttons {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+  }
+
+  &Img {
+    position: relative;
+    aspect-ratio: 1800 / 2144;
+    width: 100%;
+    max-width: 336px;
+  }
+}
+
+.button {
+  width: 200px;
+}
+
+.imgBook {
+  @supports (font: -apple-system-body) and (-webkit-appearance: none) {
+    img[loading="lazy"] {
+      clip-path: inset(0.6px)
+    }
+  }
+}
+
+.labelBlurb {
+  font-size: 14px;
+}
+
+.labelTitle {
+  font-weight: bold;
+}
+
+.labelReleaseDate {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  color: $color-focus;
+}
+
+.labelPreorder {
+  color: $color-focus;
+  font-size: 18px;
+  font-weight: bold;
+}

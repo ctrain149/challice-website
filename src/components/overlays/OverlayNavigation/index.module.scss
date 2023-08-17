@@ -1,0 +1,44 @@
+@import '../../../styles/colors.scss';
+
+.containerTitle {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.containerBody {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.containerNavItem {
+  user-select: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+
+  font-size: 32px;
+  text-align:center;
+
+  &:hover {
+    color: $color-orange;
+  }
+}
+
+.labelTitle {
+  margin-top: 6px;
+
+  font-family: 'BadScript', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  font-size: 32px;
+}
+
+.labelItem {
+  margin-top: 6px;
+
+  font-family: 'BadScript', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+}
