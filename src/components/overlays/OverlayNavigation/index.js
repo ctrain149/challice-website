@@ -66,7 +66,7 @@ export default function Overlay({ items = [] }) {
   function renderTitle() {
     return (
       <div className={styles.containerTitle}>
-        <span className={styles.labelTitle}>M. H. Reardon</span>
+        <span className={styles.labelTitle}>Challice Ryan</span>
 
         <IconButton aria-label="Close Menu Button" onClick={() => dismiss()}>
           <Close fontSize="32px" />

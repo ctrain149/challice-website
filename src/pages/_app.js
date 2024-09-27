@@ -24,7 +24,7 @@ export default function MyApp({
   return (
     <CacheProvider value={emotionCache}>
       <Head>
-        <title>M.H. Reardon | The Official Website</title>
+        <title>Challice Ryan | The Official Website</title>
         <link rel="icon" href="/butterfly.png" />
       </Head>
 
@@ -37,7 +37,7 @@ export default function MyApp({
 
             <div className={styles.containerFooter}>
               <span className={styles.labelCopyright}>
-                Copyright © 2023 M.H. Reardon - All Rights Reserved.
+                Copyright © 2023 Challice Ryan - All Rights Reserved.
               </span>
             </div>
           </div>

@@ -78,7 +78,7 @@ export default function Header() {
 
   return (
     <div className={styles.container}>
-      <span className={styles.labelTitle}>M. H. Reardon</span>
+      <span className={styles.labelTitle}>Challice Ryan</span>
 
       <Tabs className={styles.tabs} value={currentTabIndex} onChange={changePath}>
         {renderDesktopTabs()}

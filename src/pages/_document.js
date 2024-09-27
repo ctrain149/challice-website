@@ -17,7 +17,7 @@ export default class MyDocument extends Document {
           />
 
           <meta property="og:type" content="website" />
-          <meta property="og:site_name" content="M.H. Reardon | The Official Website" />
+          <meta property="og:site_name" content="Challice Ryan | The Official Website" />
           <meta property="product:price:amount" content="29.95" />
           <meta property="product:price:currency" content="USD" />
           <meta property="og:url" content="https://author-website-ivory.vercel.app/" />
