@@ -120,12 +120,19 @@ export default function ModalContactForm() {
           </span>
         </div>
 
-        <IconButton aria-label="close" onClick={() => dismiss(null)}>
+        <IconButton
+          sx={{ padding: '0' }}
+          aria-label="close"
+          onClick={() => dismiss(null)}
+        >
           <Close />
         </IconButton>
       </div>
 
-      <form className="flex flex-col items-end gap-3" data-loading={loading}>
+      <form
+        className={`flex flex-col items-end gap-3 ${loading ? 'blur-sm' : ''}`}
+        data-loading={loading}
+      >
         <Textfield
           error={errors.name}
           label="Your name"
@@ -162,7 +169,7 @@ export default function ModalContactForm() {
         />
 
         <Button
-          disabled={formService.hasErrors || !dirty || !formService.isPristine}
+          disabled={formService.hasErrors || !dirty || !formService.isPristine || loading}
           icon={<Send sx={{ fontSize: '18px' }} />}
           label="Send"
           onClick={send}

@@ -1,7 +1,8 @@
 'use client';
 
 import { Button } from '@mui/material';
-import { useContext } from 'react';
+import { Download, Mail } from '@mui/icons-material';
+import { useContext, useState } from 'react';
 
 import { GlobalContext } from '../../../context/store';
 import ModalContactForm from '../../modals/ModalContactForm';
@@ -10,12 +11,28 @@ import styles from './index.module.scss';
 
 export default function Sidebar() {
   const { openSnackbar, openModal } = useContext(GlobalContext);
+  const [loading, setLoading] = useState(false);
 
-  function downloadProfessionalCV() {
-    window.open(
-      'https://challices-website.s3.amazonaws.com/Professional_CV.pdf',
-      '_blank',
-    );
+  async function downloadProfessionalCV() {
+    try {
+      setLoading(true);
+
+      const response = await fetch(`/api/s3-url?version=Professional_CV.pdf`);
+
+      if (!response.ok) {
+        throw new Error('Failed to download PDF');
+      }
+
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+
+      window.open(url, '_blank');
+      window.URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error('Error fetching S3 URL:', error);
+    } finally {
+      setLoading(false);
+    }
   }
 
   async function openModalContactForm() {
@@ -37,12 +54,19 @@ export default function Sidebar() {
   }
 
   return (
-    <div className="flex flex-col items-start justify-between w-64 h-full p-5 bg-slate-800 rounded-md">
+    <div className="flex flex-col items-start justify-between w-72 h-full p-5 bg-slate-800 rounded-md">
       <div className="flex flex-col items-start">
         <span className={styles.labelTitle}>Challice Ryan</span>
 
-        <Button onClick={downloadProfessionalCV}>Download my Resume</Button>
-        <Button onClick={openModalContactForm}>Contact Me</Button>
+        <div className="flex flex-col items-start gap-0">
+          <Button sx={{ display: 'flex', gap: '8px' }} onClick={downloadProfessionalCV}>
+            <Download /> Download my Resume
+          </Button>
+
+          <Button sx={{ display: 'flex', gap: '8px' }} onClick={openModalContactForm}>
+            <Mail /> Contact Me
+          </Button>
+        </div>
       </div>
 
       <div className="p-2">
