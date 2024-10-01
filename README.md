@@ -1,3 +1,3 @@
-# Author Website Application
+# Challice Website Application
 
-The purspose of this repo is to create a website for an author.
+The purpose of this repo is to create a website for myself.

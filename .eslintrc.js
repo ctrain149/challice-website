@@ -11,6 +11,7 @@ module.exports = {
     'max-len': ['error', { code: 90 }],
     'no-console': ['error', { allow: ['warn', 'error'] }],
     'no-trailing-spaces': 'error',
+    'no-unused-vars': 'error',
     quotes: [2, 'single', { avoidEscape: true }],
     'react/prop-types': 'off',
     'prettier/prettier': ['error', { endOfLine: 'auto' }, { usePrettierrc: true }],

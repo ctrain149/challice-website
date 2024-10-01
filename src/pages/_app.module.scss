@@ -1,14 +1,12 @@
 .container {
   height: 100%;
-  padding: 20px;
 
   &Content {
     display: flex;
-    flex-flow: column nowrap;
     align-self: center;
-    width: 100%;
-    max-width: 1000px;
     height: 100%;
+    width: 100%;
+    padding: 20px;
 
     @media screen and (max-width: 700px)  {
       max-width: unset;
@@ -21,6 +19,14 @@
     justify-content: space-between;
     padding: 20px;
   }
+}
+
+.sidebar {
+  flex: 1 0 0;
+}
+
+.page {
+  flex: 3 0 0;
 }
 
 .labelCopyright {

@@ -12,16 +12,18 @@ export default function DialogStack() {
       const zIndex = index + 1001;
 
       return (
-        <div sx={{ 'z-index': zIndex }} key={index}>
+        <div className={styles.dialog} sx={{ 'z-index': zIndex }} key={index}>
           {dialog}
         </div>
       );
     });
   }
 
-  return (
+  return stack.length > 0 ? (
     <div className={styles.DialogStack}>
-      <div className={styles.container}>{renderDialogs()}</div>
+      <div className={styles.blocker} sx={{ 'z-index': 999 }} />
+
+      {renderDialogs()}
     </div>
-  );
+  ) : null;
 }
