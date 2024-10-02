@@ -49,7 +49,7 @@ export default function Sidebar() {
   }
 
   const className =
-    'flex flex-col items-start justify-between w-72 h-full p-5 bg-slate-800 rounded-md';
+    'flex flex-col items-start justify-between w-full h-fit p-5 bg-slate-800 rounded-md md:w-72 md:h-full';
 
   return (
     <div className={className}>
@@ -65,10 +65,6 @@ export default function Sidebar() {
             <Mail /> Contact Me
           </Button>
         </div>
-      </div>
-
-      <div className="p-2">
-        <span>Copyright © 2023 Challice Ryan - All Rights Reserved.</span>
       </div>
     </div>
   );

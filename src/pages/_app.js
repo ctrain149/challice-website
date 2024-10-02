@@ -24,7 +24,7 @@ export default function MyApp({ Component, emotionCache = clientSideEmotionCache
 
       <ThemeProvider theme={theme}>
         <GlobalProvider>
-          <div className="flex self-center w-full h-full p-5">
+          <div className="flex flex-col self-center w-full h-full p-5 md:flex-row">
             <Sidebar />
 
             <Component {...pageProps} />
