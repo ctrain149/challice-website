@@ -14,11 +14,7 @@ import '../styles/global.scss';
 
 const clientSideEmotionCache = createEmotionCache();
 
-export default function MyApp({
-  Component,
-  emotionCache = clientSideEmotionCache,
-  pageProps,
-}) {
+export default function MyApp({ Component, emotionCache = clientSideEmotionCache, pageProps }) {
   return (
     <CacheProvider value={emotionCache}>
       <Head>

@@ -115,16 +115,11 @@ export default function ModalContactForm() {
           <span className="text-2xl">Contact Me</span>
 
           <span>
-            Please fill out and submit the form below and I will contact you as soon as
-            possible!
+            Please fill out and submit the form below and I will contact you as soon as possible!
           </span>
         </div>
 
-        <IconButton
-          sx={{ padding: '0' }}
-          aria-label="close"
-          onClick={() => dismiss(null)}
-        >
+        <IconButton sx={{ padding: '0' }} aria-label="close" onClick={() => dismiss(null)}>
           <Close />
         </IconButton>
       </div>

@@ -2,7 +2,7 @@
 
 import { Button } from '@mui/material';
 import { Download, Mail } from '@mui/icons-material';
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 
 import { GlobalContext } from '../../../context/store';
 import ModalContactForm from '../../modals/ModalContactForm';
@@ -11,13 +11,10 @@ import styles from './index.module.scss';
 
 export default function Sidebar() {
   const { openSnackbar, openModal } = useContext(GlobalContext);
-  const [loading, setLoading] = useState(false);
 
   async function downloadProfessionalCV() {
     try {
-      setLoading(true);
-
-      const response = await fetch(`/api/s3-url?version=Professional_CV.pdf`);
+      const response = await fetch('/api/s3-url?version=Professional_CV.pdf');
 
       if (!response.ok) {
         throw new Error('Failed to download PDF');
@@ -30,8 +27,6 @@ export default function Sidebar() {
       window.URL.revokeObjectURL(url);
     } catch (error) {
       console.error('Error fetching S3 URL:', error);
-    } finally {
-      setLoading(false);
     }
   }
 
@@ -53,8 +48,11 @@ export default function Sidebar() {
     }
   }
 
+  const className =
+    'flex flex-col items-start justify-between w-72 h-full p-5 bg-slate-800 rounded-md';
+
   return (
-    <div className="flex flex-col items-start justify-between w-72 h-full p-5 bg-slate-800 rounded-md">
+    <div className={className}>
       <div className="flex flex-col items-start">
         <span className={styles.labelTitle}>Challice Ryan</span>
 

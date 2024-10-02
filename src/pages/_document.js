@@ -11,10 +11,7 @@ export default class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <meta name="title" content="New Book: Flight of the Monarchs" />
-          <meta
-            name="description"
-            content="An evocative coming-of-age tale set in 1960s America"
-          />
+          <meta name="description" content="An evocative coming-of-age tale set in 1960s America" />
 
           <meta property="og:type" content="website" />
           <meta property="og:site_name" content="Challice Ryan | The Official Website" />
@@ -37,10 +34,7 @@ export default class MyDocument extends Document {
           <meta property="og:availability" content="preorder" />
 
           <meta property="twitter:card" content="summary_large_image" />
-          <meta
-            property="twitter:url"
-            content="https://author-website-ivory.vercel.app/"
-          />
+          <meta property="twitter:url" content="https://author-website-ivory.vercel.app/" />
           <meta property="twitter:title" content="New Book: Flight of the Monarchs" />
           <meta
             property="twitter:description"

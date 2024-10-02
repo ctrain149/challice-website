@@ -50,11 +50,7 @@ export default function Overlay({ items = [] }) {
     return (
       <div className={styles.containerBody}>
         {items.map((item, index) => (
-          <span
-            className={styles.containerNavItem}
-            key={index}
-            onClick={() => dismiss(item)}
-          >
+          <span className={styles.containerNavItem} key={index} onClick={() => dismiss(item)}>
             {item.icon || null}
             <span className={styles.labelItem}>{item.label}</span>
           </span>

@@ -2,18 +2,30 @@ module.exports = {
   root: true,
   env: { node: true, es6: true, es2021: true },
   ignorePatterns: ['node_modules/*', '.next/*', '.out/*', '!.prettierrc.js'],
-  plugins: ['prettier'],
-  extends: ['next', 'eslint:recommended', 'prettier'],
+  extends: ['next', 'eslint:recommended', 'plugin:prettier/recommended'],
   parserOptions: {
     sourceType: 'module',
   },
   rules: {
-    'max-len': ['error', { code: 90 }],
+    'max-len': ['error', { code: 100 }],
     'no-console': ['error', { allow: ['warn', 'error'] }],
     'no-trailing-spaces': 'error',
     'no-unused-vars': 'error',
     quotes: [2, 'single', { avoidEscape: true }],
     'react/prop-types': 'off',
-    'prettier/prettier': ['error', { endOfLine: 'auto' }, { usePrettierrc: true }],
+    'react-hooks/exhaustive-deps': 'off',
+    "prettier/prettier": [
+      "error",
+      {
+        arrowParens: 'always',
+        bracketSpacing: true,
+        printWidth: 100,
+        semi: true,
+        singleQuote: true,
+        tabWidth: 2,
+        trailingComma: 'all',
+        useTabs: false,
+      }
+    ]
   },
 };

@@ -1,11 +1,5 @@
 import { Close } from '@mui/icons-material';
-import {
-  Dialog,
-  DialogActions,
-  DialogContent,
-  DialogTitle,
-  IconButton,
-} from '@mui/material';
+import { Dialog, DialogActions, DialogContent, DialogTitle, IconButton } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import React, { useContext } from 'react';
 
