@@ -49,8 +49,8 @@ export default function Sidebar() {
   }
 
   const className =
-    'flex flex-col items-start justify-between w-full h-fit p-5' +
-    'bg-slate-800 rounded-md md:w-72 md:h-full';
+    'flex flex-col items-start justify-between w-full ' +
+    'h-fit p-5 bg-slate-800 rounded-md md:w-72 md:h-full';
 
   return (
     <div className={className}>
