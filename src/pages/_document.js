@@ -1,3 +1,5 @@
+'use client';
+
 import createEmotionServer from '@emotion/server/create-instance';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import * as React from 'react';

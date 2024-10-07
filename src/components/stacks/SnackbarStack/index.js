@@ -1,12 +1,8 @@
-import { useContext } from 'react';
-
-import { GlobalContext } from '../../../context/store';
+import { useGlobalContext } from '../../../context/global-context';
 import Snackbar from '../../snackbars/Snackbar';
 
-// import styles from './index.module.scss';
-
 export default function SnackbarStack() {
-  const { popSnackbarStack, snackbarStack } = useContext(GlobalContext);
+  const { popSnackbarStack, snackbarStack } = useGlobalContext();
 
   return snackbarStack.map(({ snackbar }, index) => {
     let open = true;

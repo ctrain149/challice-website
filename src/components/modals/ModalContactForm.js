@@ -4,9 +4,9 @@ import { Send, Close } from '@mui/icons-material';
 import { IconButton } from '@mui/material';
 import FormService from '@zensen/form-service';
 import { isEmailAddress, isRequired } from '@zensen/form-validators';
-import { useContext, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
-import { GlobalContext } from '../../context/store';
+import { useGlobalContext } from '../../context/global-context';
 
 import Button from '../controls/Button';
 import Select from '../inputs/Select';
@@ -38,7 +38,7 @@ const subjects = Object.freeze([
 ]);
 
 export default function ModalContactForm() {
-  const { openSnackbar, openModal, popStack } = useContext(GlobalContext);
+  const { openSnackbar, openModal, popStack } = useGlobalContext();
   const [dirty, setDirty] = useState(false);
   const [errors, setErrors] = useState(model);
   const [loading, setLoading] = useState(false);

@@ -1,9 +1,9 @@
 import { Close } from '@mui/icons-material';
 import { Dialog, DialogActions, DialogContent, DialogTitle, IconButton } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import React, { useContext } from 'react';
+import React from 'react';
 
-import { GlobalContext } from '../../../context/store';
+import { useGlobalContext } from '../../../context/global-context';
 import Button from '../../controls/Button';
 
 import styles from './index.module.scss';
@@ -24,7 +24,7 @@ const MatDialog = styled(Dialog)(() => ({
 }));
 
 export default function Modal({ actions = '', body = '', title = '' }) {
-  const { popStack } = useContext(GlobalContext);
+  const { popStack } = useGlobalContext();
 
   function dismiss(v) {
     popStack(v);

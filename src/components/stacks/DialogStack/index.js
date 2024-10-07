@@ -1,11 +1,9 @@
-import { useContext } from 'react';
-
-import { GlobalContext } from '../../../context/store';
+import { useGlobalContext } from '../../../context/global-context';
 
 import styles from './index.module.scss';
 
 export default function DialogStack() {
-  const { stack } = useContext(GlobalContext);
+  const { stack } = useGlobalContext();
 
   function renderDialogs() {
     return stack.map(({ dialog }, index) => {
