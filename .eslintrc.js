@@ -11,7 +11,6 @@ module.exports = {
     'no-console': ['error', { allow: ['warn', 'error'] }],
     'no-trailing-spaces': 'error',
     'no-unused-vars': 'error',
-    quotes: [2, 'single', { avoidEscape: true }],
     'react/prop-types': 'off',
     'react-hooks/exhaustive-deps': 'off',
     "prettier/prettier": [

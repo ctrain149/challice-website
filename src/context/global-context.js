@@ -57,7 +57,8 @@ export const GlobalProvider = ({ children }) => {
     if (savedMode) {
       setTheme(savedMode);
     } else {
-      const systemPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const systemPrefersDark =
+        window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
       setTheme(systemPrefersDark ? 'dark' : 'light');
     }

@@ -66,18 +66,4 @@ export const darkTheme = createTheme({
   },
 });
 
-export const getTheme = (mode) => {
-  return createTheme({
-    ...theme,
-    palette: {
-      ...theme.palette,
-      mode: mode,
-      background: theme.palette[mode].background,
-      text: theme.palette[mode].text,
-      primary: theme.palette[mode].primary,
-      secondary: theme.palette[mode].secondary,
-    },
-  });
-};
-
 export default lightTheme;
