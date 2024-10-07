@@ -1,7 +1,7 @@
 import { Alert, Snackbar as MuiSnackbar } from '@mui/material';
 import { useContext } from 'react';
 
-import { GlobalContext } from '../../../context/store';
+import { GlobalContext } from '../../../context/global-context';
 
 // import styles from './index.module.scss';
 

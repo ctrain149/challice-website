@@ -3,7 +3,7 @@ import { Dialog, DialogActions, DialogContent, DialogTitle, IconButton } from '@
 import { styled } from '@mui/material/styles';
 import React, { useContext } from 'react';
 
-import { GlobalContext } from '../../../context/store';
+import { GlobalContext } from '../../../context/global-context';
 import Button from '../../controls/Button';
 
 import styles from './index.module.scss';

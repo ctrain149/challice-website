@@ -10,7 +10,7 @@ import {
 import { styled } from '@mui/material/styles';
 import React, { useContext } from 'react';
 
-import { GlobalContext } from '../../../context/store';
+import { GlobalContext } from '../../../context/global-context';
 import Button from '../../controls/Button';
 import Loader from '../../misc/Loader';
 

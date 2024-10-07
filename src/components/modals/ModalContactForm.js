@@ -6,7 +6,7 @@ import FormService from '@zensen/form-service';
 import { isEmailAddress, isRequired } from '@zensen/form-validators';
 import { useContext, useEffect, useState } from 'react';
 
-import { GlobalContext } from '../../context/store';
+import { GlobalContext } from '../../context/global-context';
 
 import Button from '../controls/Button';
 import Select from '../inputs/Select';

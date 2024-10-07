@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 
-import { GlobalContext } from '../../../context/store';
+import { GlobalContext } from '../../../context/global-context';
 import Button from '../../controls/Button';
 import Modal from '../Modal';
 
