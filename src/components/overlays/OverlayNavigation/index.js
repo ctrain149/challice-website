@@ -1,11 +1,10 @@
 import { Close } from '@mui/icons-material';
 import { Dialog, DialogContent, DialogTitle, IconButton, Slide } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import React, { useContext } from 'react';
-
-import { GlobalContext } from '../../../context/store';
+import React from 'react';
 
 import styles from './index.module.scss';
+import { useGlobalContext } from '../../../context/global-context';
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="left" ref={ref} {...props} />;
@@ -40,7 +39,7 @@ const MatDialog = styled(Dialog)(() => ({
 }));
 
 export default function Overlay({ items = [] }) {
-  const { popStack } = useContext(GlobalContext);
+  const { popStack } = useGlobalContext();
 
   function dismiss(v) {
     popStack(v);

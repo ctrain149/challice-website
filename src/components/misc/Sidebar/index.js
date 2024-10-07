@@ -80,7 +80,7 @@ export default function Sidebar() {
     'rounded-md',
     'dark:bg-slate-800',
     'dark:border-slate-600',
-    'md:w-96',
+    'md:w-[500px]',
     'md:h-full'
   ].join(' ');
 
@@ -128,6 +128,16 @@ export default function Sidebar() {
     }
   }
 
+  function renderThemeButtons() {
+    return (
+      <div className="flex w-full gap-1 justify-between">
+        <MaterialUISwitch sx={{ m: 1 }} checked={theme === 'dark'} onClick={toggleTheme} />
+
+        <Button onClick={useSystemTheme}>Use System Theme</Button>
+      </div>
+    );
+  }
+
   return (
     <div className={className}>
       <div className="flex flex-col h-full items-start justify-between">
@@ -143,15 +153,7 @@ export default function Sidebar() {
           </Button>
         </div>
 
-        <div className="flex flex-col gap-3">
-          <FormControlLabel
-            control={<MaterialUISwitch sx={{ m: 1 }} checked={theme === 'dark'} />}
-            label="MUI switch"
-            onClick={toggleTheme}
-          />
-
-          <Button onClick={useSystemTheme}>Use System Theme</Button>
-        </div>
+        {renderThemeButtons()}
       </div>
     </div>
   );

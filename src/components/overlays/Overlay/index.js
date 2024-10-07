@@ -8,9 +8,9 @@ import {
   Slide,
 } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import React, { useContext } from 'react';
+import React from 'react';
 
-import { GlobalContext } from '../../../context/global-context';
+import { useGlobalContext } from '../../../context/global-context';
 import Button from '../../controls/Button';
 import Loader from '../../misc/Loader';
 
@@ -46,7 +46,7 @@ const MatDialog = styled(Dialog)(() => ({
 }));
 
 export default function Overlay({ actions = '', body = '', loading = '', title = '' }) {
-  const { popStack } = useContext(GlobalContext);
+  const { popStack } = useGlobalContext();
 
   function dismiss(v) {
     popStack(v);

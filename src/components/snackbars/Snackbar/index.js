@@ -1,9 +1,6 @@
 import { Alert, Snackbar as MuiSnackbar } from '@mui/material';
-import { useContext } from 'react';
 
-import { GlobalContext } from '../../../context/global-context';
-
-// import styles from './index.module.scss';
+import { useGlobalContext } from '../../../context/global-context';
 
 export default function Snackbar({
   label = '',
@@ -12,7 +9,7 @@ export default function Snackbar({
   severity = 'info',
   timeout = 5000,
 }) {
-  const { popSnackbarStack } = useContext(GlobalContext);
+  const { popSnackbarStack } = useGlobalContext();
 
   setTimeout(popSnackbarStack, timeout);
 

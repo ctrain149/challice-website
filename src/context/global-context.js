@@ -36,13 +36,13 @@ export const GlobalProvider = ({ children }) => {
 
     if (stackItem.resolveFn) stackItem.resolveFn(item);
 
-    setStack(stack);
+    setStack([...stack]);
   }
 
   function popSnackbarStack() {
     const newStack = snackbarStack.length > 1 ? snackbarStack.slice(1) : [];
 
-    return setSnackbarStack(newStack);
+    return setSnackbarStack([...newStack]);
   }
 
   function toggleTheme() {

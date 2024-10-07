@@ -1,13 +1,11 @@
-import { useContext } from 'react';
-
-import { GlobalContext } from '../../../context/global-context';
+import { useGlobalContext } from '../../../context/global-context';
 import Button from '../../controls/Button';
 import Modal from '../Modal';
 
 import styles from './index.module.scss';
 
 export default function ModalConfirm({ body, title }) {
-  const { popStack } = useContext(GlobalContext);
+  const { popStack } = useGlobalContext();
 
   function dismiss(v) {
     popStack(v);

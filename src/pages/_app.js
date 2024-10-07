@@ -36,14 +36,10 @@ const AppContent = ({ Component, pageProps }) => {
   const { theme } = useGlobalContext();
   const [materialTheme, setMaterialTheme] = useState(darkTheme);
 
-  console.log('theme :>> ', theme);
-
   useEffect(() => {
     const savedMode = localStorage.getItem('themeMode');
     const defaultMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
     const selectedTheme = theme || savedMode || defaultMode;
-
-    console.log('selectedTheme :>> ', selectedTheme);
 
     if (selectedTheme === 'dark') {
       document.body.style.background = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100%25' width='100%25'%3E%3Cdefs%3E%3Cpattern id='doodad' width='200' height='200' viewBox='0 0 40 40' patternUnits='userSpaceOnUse' patternTransform=''%3E%3Crect width='100%25' height='100%25' fill='rgba(0, 20, 20,1)'/%3E%3Cpath d='M-0.5 20v20h1v-20zM39.5 20v20h1v-20z' fill='rgba(120, 120, 169,0.1)'/%3E%3Cpath d='M-10 29.5 h60 v1 h-60z' fill='rgba(184, 184, 184,0.1)'/%3E%3Cpath d='M19.5 0v40h1v-40z' fill='rgba(120, 120, 169,0.1)'/%3E%3Cpath d='M-10 9.5h60v1h-60z' fill='rgba(184, 184, 184,0.1)'/%3E%3Cpath d='M-0.5 0v20h1v-20zM39.5 0v20h1v-20z' fill='rgba(120, 120, 169,0.1)'/%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23doodad)' height='200%25' width='200%25'/%3E%3C/svg%3E ")`;
