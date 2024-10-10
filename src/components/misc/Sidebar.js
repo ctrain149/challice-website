@@ -1,7 +1,7 @@
 'use client';
 
-import { Button, styled, Switch } from '@mui/material';
-import { Download, Mail } from '@mui/icons-material';
+import { Button, IconButton, styled, Switch } from '@mui/material';
+import { Download, GitHub, LinkedIn, Mail } from '@mui/icons-material';
 
 import { useGlobalContext } from '../../context/global-context';
 import ModalContactForm from '../modals/ModalContactForm';
@@ -98,6 +98,14 @@ export default function Sidebar() {
     'md:h-full',
   ].join(' ');
 
+  function openWindowGithub() {
+    window.open('https://github.com/ctrain149', '_target');
+  }
+
+  function openWindowLinkedIn() {
+    window.open('https://www.linkedin.com/in/challice-genest-16455491/', '_target');
+  }
+
   function useSystemTheme() {
     const systemPrefersDark =
       window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -143,9 +151,23 @@ export default function Sidebar() {
     }
   }
 
+  function renderOutsideLinks() {
+    return (
+      <div className="flex">
+        <IconButton onClick={() => openWindowGithub()}>
+          <GitHub />
+        </IconButton>
+
+        <IconButton onClick={() => openWindowLinkedIn()}>
+          <LinkedIn />
+        </IconButton>
+      </div>
+    );
+  }
+
   function renderThemeButtons() {
     return (
-      <div className="flex w-full gap-1 justify-between">
+      <div className="flex flex-col justify-between items-end w-full gap-1">
         <MaterialUISwitch sx={{ m: 1 }} checked={theme === 'dark'} onClick={toggleTheme} />
 
         <Button onClick={useSystemTheme}>Use System Theme</Button>
@@ -155,7 +177,7 @@ export default function Sidebar() {
 
   return (
     <div className={className}>
-      <div className="flex flex-col h-full items-start justify-between">
+      <div className="flex flex-col h-full w-full items-start justify-between">
         <div className="flex flex-col items-start gap-4">
           <span className="text-gray-600 dark:text-gray-100 text-3xl">Challice Ryan</span>
 
@@ -168,7 +190,11 @@ export default function Sidebar() {
           </Button>
         </div>
 
-        {renderThemeButtons()}
+        <div className="flex items-end justify-between w-full">
+          {renderOutsideLinks()}
+
+          {renderThemeButtons()}
+        </div>
       </div>
     </div>
   );
